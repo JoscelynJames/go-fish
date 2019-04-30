@@ -43,4 +43,10 @@ body {
   text-align: center;
   color: #2c3e50;
 };
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
 </style>
