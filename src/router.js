@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import TanksFrame from './views/TanksFrameComponent.vue';
+import TanksFrame from './views/TanksFrame.vue';
 
 Vue.use(Router);
 
@@ -8,6 +8,11 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'tanks',
+      // component: TanksFrame,
+    },
+    {
+      path: '/tanks',
       name: 'tanks',
       component: TanksFrame,
     },

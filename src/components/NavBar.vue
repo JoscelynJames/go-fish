@@ -1,28 +1,51 @@
 <template>
   <div id="nav">
-      <router-link to="/">Tanks</router-link> |
-      <router-link to="/Treatments">Treatments</router-link> |
-      <router-link to="/about">About</router-link> 
+    <md-toolbar class="md-accent md-dense">
+        <router-link to="/">
+          <md-icon>home</md-icon>
+        </router-link>
+
+        <router-link to="/tanks">
+          <md-icon class="tank">call_to_action</md-icon>
+        </router-link>
+
+        <router-link to="/treatments">
+          <md-icon>colorize</md-icon>
+        </router-link>
+
+        <router-link to="/login">
+          <md-icon>person</md-icon>
+        </router-link>
+    </md-toolbar>
   </div>
 </template>
 
 <script>
 import Vue from 'vue';
+import { MdToolbar, MdIcon } from 'vue-material/dist/components';
+
+Vue.use(MdToolbar);
+Vue.use(MdIcon);
 
 export default Vue.component('nav-bar', {
   renderer: () => {},
+  components: {},
 });
 </script>
 
 <style lang="scss">
-#nav {
-  padding: 30px;
+.md-toolbar {
+  display: flex;
+  justify-content: space-around;
+
   a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+  }
+
+  .tank {
+    transform: rotate(180deg);
   }
 }
 </style>
