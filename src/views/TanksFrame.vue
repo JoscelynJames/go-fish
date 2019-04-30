@@ -14,7 +14,7 @@
             </span>
             <md-icon
               v-if="tank.maintenanceRequired"
-              class="tank">
+              class="warning-icon">
               warning
             </md-icon>
           </div>
@@ -33,7 +33,9 @@
         </md-card-media>
       </md-ripple>
     </md-card>
+  <md-icon class="add-icon md-accent">add_circle_outline</md-icon>
   </div>
+
 </template>
 
 <script>
@@ -107,7 +109,7 @@ export default Vue.component('tank-frame', {
       margin-right: 8px;
     }
 
-    .md-icon {
+    .warning-icon {
       width: 20px;
       min-width: 15px;
       height: 20px;
@@ -115,5 +117,16 @@ export default Vue.component('tank-frame', {
       font-size: 18px !important;
       color: #FFD747;
     }
+  }
+
+  .add-icon {
+    cursor: pointer;
+    position: absolute !important;
+    bottom: 10px !important;
+    right: 10px !important;
+    width: 45px;
+    min-width: 45px;
+    height: 45px;
+    font-size: 45px !important;
   }
 </style>

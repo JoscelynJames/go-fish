@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <md-toolbar class="md-accent md-dense">
+    <md-toolbar class="md-primary md-dense">
         <router-link to="/">
           <md-icon>home</md-icon>
         </router-link>
@@ -46,6 +46,14 @@ export default Vue.component('nav-bar', {
 
   .tank {
     transform: rotate(180deg);
+  }
+
+  .md-icon {
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    font-size: 30px!important;
+    color: white !important;
   }
 }
 </style>
